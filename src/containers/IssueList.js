@@ -12,11 +12,14 @@ const SortableItem = SortableElement(({ value }) => <li>{value}</li>)
 
 const SortableList = SortableContainer(({ items }) => {
   return (
-    <ul>
-      {items.map(({ id }, index) => (
-        <SortableItem key={`item-${index}`} index={index} value={id} />
-      ))}
-    </ul>
+    <div>
+      <h3>Issues:</h3>
+      <ul>
+        {items.map(({ id }, index) => (
+          <SortableItem key={`item-${index}`} index={index} value={id} />
+        ))}
+      </ul>
+    </div>
   )
 })
 
