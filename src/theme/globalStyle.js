@@ -51,4 +51,7 @@ export const GlobalStyle = createGlobalStyle`
   li {
     list-style-type: none;
   }
+  ul {
+    padding-left: 0;
+  }
 `

@@ -8,15 +8,35 @@ import {
   arrayMove,
 } from 'react-sortable-hoc'
 
-const SortableItem = SortableElement(({ value }) => <li>{value}</li>)
+import styled from 'styled-components'
+
+const Wrapper = styled.li`
+  border: 2px solid #000000;
+  padding: 5px;
+  margin-top: 5px;
+`
+
+const SortableItem = SortableElement(({ value, number, title }) => (
+  <Wrapper>
+    <div>id: {value}</div>
+    <div>number: {number}</div>
+    <div>title: {title}</div>
+  </Wrapper>
+))
 
 const SortableList = SortableContainer(({ items }) => {
   return (
     <div>
       <h3>Issues:</h3>
       <ul>
-        {items.map(({ id }, index) => (
-          <SortableItem key={`item-${index}`} index={index} value={id} />
+        {items.map(({ id, number, title }, index) => (
+          <SortableItem
+            key={`item-${index}`}
+            index={index}
+            value={id}
+            number={number}
+            title={title}
+          />
         ))}
       </ul>
     </div>

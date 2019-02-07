@@ -16,19 +16,6 @@ function* fetchUserRepos() {
       return res.data
     })
     .catch(err => console.log('fatal', err))
-
-  // console.log('res', res)
-
-  // const config = {
-  //   method: 'GET',
-  //   headers: {
-  //     Accept: 'application/vnd.github.v3+json',
-  //   },
-  // }
-  // const json = yield fetch(requestUrl, config).then(response => {
-  //   console.log(response)
-  //   return response.json()
-  // })
   console.log('repos', repos)
   yield put({ type: 'REPOS_FETCH_SUCCEEDED', data: repos })
 }
@@ -46,6 +33,7 @@ function* fetchIssues({ payload }) {
       return res.json()
     })
     if (Array.isArray(issues) && issues.length > 0) {
+      console.log(issues)
       yield put({ type: 'ISSUES_FETCH_SUCCEEDED', id, issues })
     } else {
       yield put({ type: 'ISSUES_FETCH_FAILED' })
