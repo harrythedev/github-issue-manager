@@ -39,4 +39,4 @@ $ npm install
 
 ### Demo :pushpin:
 
-![demo](./T5MVfyBwvc.gif)
+coming...
