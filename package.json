@@ -32,10 +32,7 @@
     "react-redux": "^6.0.0",
     "react-test-renderer": "^16.8.1",
     "redux": "^4.0.1",
-    "redux-act": "^1.7.4",
     "redux-devtools-extension": "^2.13.8",
-    "redux-logger": "^3.0.6",
-    "redux-saga": "^1.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-saga": "^1.0.1"
   }
 }
